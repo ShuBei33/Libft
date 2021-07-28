@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/25 13:56:48 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/02 16:54:26 by estoffel         ###   ########.fr       */
+/*   Created: 2021/06/24 19:47:31 by estoffel          #+#    #+#             */
+/*   Updated: 2021/06/26 19:13:30 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	while (*s)
+	t_list	*last_lst;
+
+	if (alst)
 	{
-		if (*s != (char)c)
-			++s;
+		last_lst = ft_lstlast(*alst);
+		if (new && last_lst)
+			last_lst->next = new;
 		else
-			return ((char *)s);
+			*alst = new;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return (NULL);
 }

@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/25 13:56:48 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/02 16:54:26 by estoffel         ###   ########.fr       */
+/*   Created: 2021/06/04 12:57:57 by estoffel          #+#    #+#             */
+/*   Updated: 2021/06/05 19:08:39 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	while (*s)
+	size_t				i;
+	const unsigned char	*s;
+	unsigned char		*d;
+
+	i = 0;
+	s = src;
+	d = dst;
+	if (n == 0 || d == s)
+		return (0);
+	while (i < n)
 	{
-		if (*s != (char)c)
-			++s;
-		else
-			return ((char *)s);
+		d[i] = s[i];
+		if (s[i] == (unsigned char)c)
+			return ((void *)d + i + 1);
+		++i;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
 	return (NULL);
 }

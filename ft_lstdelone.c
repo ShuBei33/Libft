@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/25 13:56:48 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/02 16:54:26 by estoffel         ###   ########.fr       */
+/*   Created: 2021/06/24 20:10:18 by estoffel          #+#    #+#             */
+/*   Updated: 2021/06/26 22:16:47 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	while (*s)
+	if (del && lst)
 	{
-		if (*s != (char)c)
-			++s;
-		else
-			return ((char *)s);
+		del(lst->content);
+		free(lst);
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return (NULL);
 }

@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/25 13:56:48 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/02 16:54:26 by estoffel         ###   ########.fr       */
+/*   Created: 2021/06/25 19:16:21 by estoffel          #+#    #+#             */
+/*   Updated: 2021/06/26 21:34:54 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (*s)
+	if (f)
 	{
-		if (*s != (char)c)
-			++s;
-		else
-			return ((char *)s);
+		while (lst)
+		{
+			f(lst->content);
+			lst = lst->next;
+		}
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return (NULL);
 }

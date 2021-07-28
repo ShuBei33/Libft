@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/25 13:56:48 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/02 16:54:26 by estoffel         ###   ########.fr       */
+/*   Created: 2021/07/28 19:25:16 by estoffel          #+#    #+#             */
+/*   Updated: 2021/07/28 19:25:55 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strndup(char const *s1, size_t n)
 {
-	while (*s)
+	size_t	len;
+	size_t	i;
+	char	*ptr;
+
+	len = ft_strlen(s1);
+	if (len < n)
+		ptr = malloc(sizeof(char) * (len + 1));
+	else
+		ptr = malloc(sizeof(char) * (n + 1));
+	if (!ptr)
+		return (NULL);
+	i = 0;
+	while (i < n && s1[i])
 	{
-		if (*s != (char)c)
-			++s;
-		else
-			return ((char *)s);
+		ptr[i] = s1[i];
+		++i;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return (NULL);
+	ptr[i] = 0;
+	return (ptr);
 }

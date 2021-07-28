@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/25 13:56:48 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/02 16:54:26 by estoffel         ###   ########.fr       */
+/*   Created: 2021/06/04 17:12:40 by estoffel          #+#    #+#             */
+/*   Updated: 2021/06/06 15:36:53 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	while (*s)
+	size_t	i;
+
+	i = 0;
+	if (len == 0 || dst == src)
+		return (dst);
+	if (dst < src)
 	{
-		if (*s != (char)c)
-			++s;
-		else
-			return ((char *)s);
+		while (i < len)
+		{
+			((unsigned char *)dst)[i] = ((const unsigned char *)src)[i];
+			++i;
+		}
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return (NULL);
+	if (dst > src)
+	{
+		while (len)
+		{
+			((unsigned char *)dst)[len - 1]
+				= ((const unsigned char *)src)[len - 1];
+			--len;
+		}
+	}
+	return (dst);
 }

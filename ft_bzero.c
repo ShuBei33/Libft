@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/25 13:56:48 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/02 16:54:26 by estoffel         ###   ########.fr       */
+/*   Created: 2021/06/02 17:07:31 by estoffel          #+#    #+#             */
+/*   Updated: 2021/06/04 19:25:34 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char	*ft_strchr(const char *s, int c)
+void	ft_bzero(void *s, size_t n)
 {
-	while (*s)
+	unsigned char	*ptr;
+
+	ptr = s;
+	while (n--)
 	{
-		if (*s != (char)c)
-			++s;
-		else
-			return ((char *)s);
+		*ptr = '\0';
+		++ptr;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return (NULL);
 }

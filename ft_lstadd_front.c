@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/25 13:56:48 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/02 16:54:26 by estoffel         ###   ########.fr       */
+/*   Created: 2021/06/24 17:27:42 by estoffel          #+#    #+#             */
+/*   Updated: 2021/06/24 19:46:18 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	while (*s)
+	if (new && alst)
 	{
-		if (*s != (char)c)
-			++s;
-		else
-			return ((char *)s);
+		new->next = *alst;
+		*alst = new;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return (NULL);
 }

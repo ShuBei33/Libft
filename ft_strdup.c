@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/25 13:56:48 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/02 16:54:26 by estoffel         ###   ########.fr       */
+/*   Created: 2021/06/05 18:10:21 by estoffel          #+#    #+#             */
+/*   Updated: 2021/06/12 15:26:35 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strdup(const char *s1)
 {
-	while (*s)
+	size_t	len;
+	char	*ptr;
+	char	*ptr_cpy;
+
+	len = ft_strlen(s1);
+	ptr = malloc(sizeof(char) * (len + 1));
+	if (!ptr)
+		return (NULL);
+	ptr_cpy = ptr;
+	while (*s1)
 	{
-		if (*s != (char)c)
-			++s;
-		else
-			return ((char *)s);
+		*ptr_cpy = *s1;
+		++s1;
+		++ptr_cpy;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return (NULL);
+	*ptr_cpy = '\0';
+	return (ptr);
 }
