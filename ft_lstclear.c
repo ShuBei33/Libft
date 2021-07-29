@@ -6,11 +6,10 @@
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 20:22:33 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/25 19:14:52 by estoffel         ###   ########.fr       */
+/*   Updated: 2021/07/29 18:40:40 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))

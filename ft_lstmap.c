@@ -6,11 +6,10 @@
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 19:35:30 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/26 20:13:30 by estoffel         ###   ########.fr       */
+/*   Updated: 2021/07/29 18:40:57 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))

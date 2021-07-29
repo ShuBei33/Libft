@@ -6,11 +6,10 @@
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/06 17:42:11 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/06 18:52:12 by estoffel         ###   ########.fr       */
+/*   Updated: 2021/07/29 18:43:02 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

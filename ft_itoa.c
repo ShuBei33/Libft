@@ -6,11 +6,11 @@
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/12 19:13:36 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/17 16:08:16 by estoffel         ###   ########.fr       */
+/*   Updated: 2021/07/29 18:40:28 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	intlen(long int n)
 {

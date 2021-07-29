@@ -6,11 +6,10 @@
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/12 16:00:22 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/26 22:15:53 by estoffel         ###   ########.fr       */
+/*   Updated: 2021/07/29 18:43:35 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static char	*ft_strndup(const char *s1, size_t n)

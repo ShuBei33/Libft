@@ -6,11 +6,11 @@
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 13:17:39 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/04 19:54:34 by estoffel         ###   ########.fr       */
+/*   Updated: 2021/07/29 18:43:13 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

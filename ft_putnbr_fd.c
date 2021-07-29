@@ -6,11 +6,11 @@
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/06 17:19:42 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/12 19:23:44 by estoffel         ###   ########.fr       */
+/*   Updated: 2021/07/29 18:42:21 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 static void	ft_putc_fd(char c, int fd)
 {

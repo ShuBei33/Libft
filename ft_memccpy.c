@@ -6,11 +6,11 @@
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 12:57:57 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/05 19:08:39 by estoffel         ###   ########.fr       */
+/*   Updated: 2021/07/29 18:41:14 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {

@@ -6,11 +6,10 @@
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/12 19:24:20 by estoffel          #+#    #+#             */
-/*   Updated: 2021/06/21 18:07:40 by estoffel         ###   ########.fr       */
+/*   Updated: 2021/07/29 18:42:36 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static char	**ft_nomalloc(char **output, size_t i)
