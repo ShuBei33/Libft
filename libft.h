@@ -6,7 +6,7 @@
 /*   By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 18:36:56 by estoffel          #+#    #+#             */
-/*   Updated: 2021/07/29 18:44:59 by estoffel         ###   ########.fr       */
+/*   Updated: 2021/08/07 18:05:42 by estoffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct s_list
 }					t_list;
 
 char	*ft_itoa(int n);
+char	*ft_itoa_base(int n, char *base);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
 char	*ft_strjoin(char const *s1, char const *s2);

@@ -6,7 +6,7 @@
 #    By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/22 15:54:32 by estoffel          #+#    #+#              #
-#    Updated: 2021/07/29 18:48:04 by estoffel         ###   ########.fr        #
+#    Updated: 2021/08/07 20:22:03 by estoffel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SRC		=	\
 			ft_calloc.c			\
 			ft_isalnum.c		\
 			ft_itoa.c			\
+			ft_itoa_base.c		\
 			ft_isalpha.c		\
 			ft_isascii.c		\
 			ft_isdigit.c		\
