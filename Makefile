@@ -6,7 +6,7 @@
 #    By: estoffel <estoffel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/22 15:54:32 by estoffel          #+#    #+#              #
-#    Updated: 2021/08/07 20:22:03 by estoffel         ###   ########.fr        #
+#    Updated: 2021/12/18 20:55:50 by estoffel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ CFLAGS	=	-Wall -Wextra -Werror
 
 SRC		=	\
 			ft_atoi.c			\
+			ft_atol.c			\
 			ft_bzero.c			\
 			ft_calloc.c			\
 			ft_isalnum.c		\
